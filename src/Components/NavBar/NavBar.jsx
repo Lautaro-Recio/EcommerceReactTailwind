@@ -8,7 +8,7 @@ import NavLink from "./Navlink"
 const NavBar =() =>{
     const [ClassOfNav, setClassOfNav] = useState("font-bold hidden w-2/5 h-full md:flex gap-4 md:mr-auto md:flex-row md:static md:gap-4 md:p-0 md:h-auto")
     const openMenu = ()=>{
-        setClassOfNav(" w-4/5 absolute bg-white top-0 left-0 h-full p-8 gap-y-5 flex flex-col md:flex gap-4 md:mr-auto md:flex-row md:static md:gap-4 md:p-0 md:h-auto")
+        setClassOfNav(" w-4/5 absolute bg-white top-0 left-0 h-full p-8 gap-y-5 flex flex-col md:flex gap-4 md:mr-auto md:flex-row md:static md:gap-4 md:p-0 md:h-auto z-10")
     }
     const closeMenu = ()=>{
         setClassOfNav("hidden w-2/5 h-full md:flex gap-4 md:mr-auto md:flex-row md:static md:gap-4 md:p-0 md:h-auto")
@@ -16,7 +16,7 @@ const NavBar =() =>{
     
     return(
         <>
-           <header className="flex container mx-auto gap-8  py-5 px-4 items-end">
+           <header className="flex container mx-auto gap-8  py-5 px-4 items-end ">
             {/* En tailwind hay clases preestablecidas que definene, en este caso las medias querys para los dispositivos */}
 
                 <button className="md:hidden " onClick={openMenu}>   
