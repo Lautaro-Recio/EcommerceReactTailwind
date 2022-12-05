@@ -19,14 +19,18 @@ const MainGalery =({imgs ,imgsSmall}) =>{
                 openModal={openModal}
             />   
             { isOpenModal &&(
+                <>
+                    <span className="top-0 left-0  fixed w-full h-full bg-[#1f1f1f4b]" onClick={closeModal}></span>                    
                     <Galery 
                     imgs={imgs} 
                     imgsSmall={imgsSmall}
                     isOpenModal={isOpenModal}
                     closeModal={closeModal}
                     /* El md:-translate-y-1/2 y el md:-translate-x-1/2 sirve para mover el modal medio de la pagina*/
-                    className="hidden md:grid md:absolute md:top-1/2 md:letf-1/2 md:-translate-y-1/2 md:translate-x-1/2 md:grid-cols-4 md:gap-4  md:max-w-md md:px-10 "
-                    /> 
+                    className="hidden md:grid md:absolute md:top-1/2 md:letf-1/2 top-1/2 letf-1/2 md:-translate-y-1/2 md:translate-x-1/2 md:grid-cols-4 md:gap-4  md:max-w-md md:px-10 "
+                    />  
+
+                </>
                 )
             }
         </>

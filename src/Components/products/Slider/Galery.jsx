@@ -27,7 +27,7 @@ const Galery =({imgs=[], imgsSmall=[],isOpenModal=false, openModal=null,closeMod
             }
             <div className="col-span-4 relative">
                 {/* aspect[16-9]" proporciona la img a la pantalla, para que no se aplaste */}
-                <img onClick={openModal} src={imgs[image]} alt="" className="aspect[16/13] w-full md:[16/19] md:rounded-md"/>
+                <img onClick={openModal} src={imgs[image]} alt="" className="aspect[16/13] xl:aspect[16/16] xl:max-h-86 2xl:max-h-96 2xl:aspect[16/18] w-full md:[16/19] md:rounded-md"/>
 
                 {/* Los elementos con posicion absolute se adaptan al contenedor con position diferente a static(todos los componentes por defecto son static) por eso en el div que encierra los botones la position es relative*/}
 
@@ -40,7 +40,7 @@ const Galery =({imgs=[], imgsSmall=[],isOpenModal=false, openModal=null,closeMod
                 return(
                     <div onClick={()=>{setImage(i)}} key={i} className="relative md:rounded-md overflow-hidden">
                         <img  src={small} alt="" className="hidden md:block "/>
-                        <span className={`absolute h-full w-full  top-0 hover:border-orange-primary hover:bg-[rgba(255,255,255,0.5)] 
+                        <span className={`absolute rounded-md h-full w-full  top-0 hover:border-2  hover:border-orange-primary hover:bg-[rgba(255,255,255,0.5)] 
                         ${ i === image && "hover:bg-[rgba(255,255,255,0.5)]"}`} ></span>
                         
                     </div>

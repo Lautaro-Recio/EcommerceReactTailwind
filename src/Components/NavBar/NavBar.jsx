@@ -16,7 +16,7 @@ const NavBar =() =>{
     
     return(
         <>
-           <header className="flex container mx-auto gap-8  py-5 px-4 items-end ">
+           <header className="items-center flex container mx-auto gap-8  py-5 px-4 content-center ">
             {/* En tailwind hay clases preestablecidas que definene, en este caso las medias querys para los dispositivos */}
 
                 <button className="md:hidden " onClick={openMenu}>   
@@ -24,7 +24,7 @@ const NavBar =() =>{
                 </button>
                 {/* mr-auto es margin-right y todo lo que se pueda a la derecha */}
 
-                <img src={logo} alt="logo sneakers" className="pb-8 mr-auto md:mr-0  " />
+                <img src={logo} alt="logo sneakers" className="md:pb-8 pb-0 mr-auto md:mr-0  " />
                 <nav className={ClassOfNav}>
                     <button onClick={closeMenu} className="mb-10 md:mb-0 md:hidden">
                         <Close/>
@@ -37,7 +37,7 @@ const NavBar =() =>{
                 </nav>
                 {/* gap-4 es la separacion de los elementos*/}
 
-                <div className="flex gap-4">
+                <div className="flex gap-4 md:pb-8 pb-0 ">
                     <button>
                         <Cart/>
                     </button>
