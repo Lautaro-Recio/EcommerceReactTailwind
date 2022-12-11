@@ -15,7 +15,7 @@ const MainGalery =({imgs ,imgsSmall}) =>{
             <Galery 
                 imgs={imgs} 
                 imgsSmall={imgsSmall}
-                className="grid md:grid-cols-4 md:gap-4 md:cursor-pointer"
+                className="grid md:grid-cols-4 md:gap-4 md:cursor-pointer xl:px-20"
                 openModal={openModal}
             />   
             { isOpenModal &&(

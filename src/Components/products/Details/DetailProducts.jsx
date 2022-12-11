@@ -1,11 +1,19 @@
+import { useContext } from "react"
+import { CartContext } from "../../../Context/UseCartContext"
 import Cart from "../../Icons/Cart"
 
 
+
 const DetailProducts =() =>{
+    const {add,subtract,amount,addCart} = useContext(CartContext)
+
+
+   
+     
     return(
                 
-                <div className="container mx-auto px-4 md:w-full ">
-                    <p className="font-bold text-orange-primary mb-4 uppercase tracking-wide">Sneaker Company</p>
+                <div className="container mx-auto px-4 md:w-full  ">
+                    <p className="font-bold mt-[25%] text-orange-primary mb-4 uppercase tracking-wide">Sneaker Company</p>
                     <h2 className="font-bold text-3xl mb-4">Fall Limited Edition Sneakers</h2>
                     <p className="text-dark-grayish-blue mb-4">
                         These low-profile sneakers are your perfect casual wear companion. Featuring a 
@@ -18,13 +26,13 @@ const DetailProducts =() =>{
                     </div>
                     <div className="grid md:flex mb-10 md:w-auto md:gap-5 ">
                         <div className="grid grid-cols-3 items-center font-bold mb-4  justify-center text-center bg-gray-100 rounded-md w-full md:w-50 md:mb-0">
-                            <button className="text-orange-primary  text-4xl">-</button>
-                            <span>0</span>
-                            <button className="text-orange-primary text-4xl ">+</button>
+                            <button className="text-orange-primary  text-4xl" onClick={subtract}>-</button>
+                            <span>{amount}</span>
+                            <button className="text-orange-primary text-4xl" onClick={add} >+</button>
                         </div>
                         <button className="flex mx-auto gap-4 justify-center text-white rounded-md py-3 bg-orange-primary w-full md:w-50 hover:bg-orange-400">
                             <span className=""><Cart fill="#fff"/></span>
-                            <span className="">Add to cart</span> 
+                            <span className="" onClick={addCart}>Add to cart</span> 
                         </button>
                     </div>
                 </div>
